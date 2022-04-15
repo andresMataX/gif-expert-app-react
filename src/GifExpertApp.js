@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { AddCategory } from './components/AddCategory';
 
 export const GifExpertApp = () => {
 
@@ -7,15 +8,18 @@ export const GifExpertApp = () => {
     const [categories, setCategories] = useState(['My Chemical Romance', 'Motionless In White', 'Linkin Park']);
 
     const handleAdd = () => {
-        // Operador Spread para conservar los elementos previos y lo unimos a lo que queremos agregar
-        // setCategories([...categories, 'Get Scared']);
-        // Se obtiene el viejo arreglo y se retorna el nuevo arreglo
+        /*
+        Operador Spread para conservar los elementos previos y lo unimos a lo que queremos agregar
+        setCategories([...categories, 'Get Scared']);
+        Se obtiene el viejo arreglo y se retorna el nuevo arreglo
+        */
         setCategories(category => [...category, 'Get Scared']);
     }
 
     return (
         <>
             <h2>GifExpertApp</h2>
+            <AddCategory />
             <hr />
 
             {/* Expresión JS */}
@@ -23,7 +27,6 @@ export const GifExpertApp = () => {
                 categories
             } */}
 
-            <button onClick={handleAdd}>Agregar</button>
             <ol>
                 {
                     categories.map(category => {
