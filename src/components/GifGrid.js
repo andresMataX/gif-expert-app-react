@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export const GifGrid = ({ category }) => {
+
+    // Utilizamos este hook para no volver a llamar la función cuando se vuelve a renderizar el componente por usar useState
+    useEffect(() => {
+        getGifs();
+    }, []);
 
     const getGifs = async () => {
         const url = 'https://api.giphy.com/v1/gifs/search?q=My Chemical Romance&limit=10&api_key=E7TOz8YH0UdvnAm3I6kt7CdpH7o5McoY';
@@ -20,7 +25,7 @@ export const GifGrid = ({ category }) => {
         console.log(gifs);
     }
 
-    getGifs();
+    // getGifs();
 
     return (
         <div>
