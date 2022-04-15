@@ -7,19 +7,20 @@ export const GifExpertApp = () => {
 
     const [categories, setCategories] = useState(['My Chemical Romance', 'Motionless In White', 'Linkin Park']);
 
-    const handleAdd = () => {
-        /*
-        Operador Spread para conservar los elementos previos y lo unimos a lo que queremos agregar
-        setCategories([...categories, 'Get Scared']);
-        Se obtiene el viejo arreglo y se retorna el nuevo arreglo
-        */
-        setCategories(category => [...category, 'Get Scared']);
-    }
+    // const handleAdd = () => {
+    //     /*
+    //     Operador Spread para conservar los elementos previos y lo unimos a lo que queremos agregar
+    //     setCategories([...categories, 'Get Scared']);
+    //     Se obtiene el viejo arreglo y se retorna el nuevo arreglo
+    //     */
+    //     setCategories(category => [...category, 'Get Scared']);
+    // }
 
     return (
         <>
             <h2>GifExpertApp</h2>
-            <AddCategory />
+            {/* Podemos pasar funciones a componentes hijos por referencia */}
+            <AddCategory setCategories={setCategories} />
             <hr />
 
             {/* Expresión JS */}
