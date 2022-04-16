@@ -14,7 +14,7 @@ export const AddCategory = ({ setCategories }) => {
         // console.log('Submit hecho');
 
         if (inputValue.trim().length > 2) {
-            setCategories(category => [...category, inputValue]);
+            setCategories(category => [inputValue, ...category]);
             setInputValue('');
         }
 

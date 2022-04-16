@@ -6,7 +6,7 @@ export const GifExpertApp = () => {
 
     // const categories = ['My Chemical Romance', 'Motionless In White', 'Linkin Park'];
 
-    const [categories, setCategories] = useState(['My Chemical Romance']);
+    const [categories, setCategories] = useState(['Evangelion']);
 
     // const handleAdd = () => {
     //     /*
@@ -23,11 +23,6 @@ export const GifExpertApp = () => {
             {/* Podemos pasar funciones a componentes hijos por referencia */}
             <AddCategory setCategories={setCategories} />
             <hr />
-
-            {/* Expresión JS */}
-            {/* {
-                categories
-            } */}
 
             <ol>
                 {
