@@ -1,14 +1,18 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export const GifGrid = ({ category }) => {
+
+
+    const [images, setImages] = useState([]);
+
 
     // Utilizamos este hook para no volver a llamar la función cuando se vuelve a renderizar el componente por usar useState
     useEffect(() => {
         getGifs();
-    }, []);
+    }, []); // Se le pasa como segundo parámetro la lista de dependencias, al ser vacío, solamente se ejecuta una sola vez
 
     const getGifs = async () => {
-        const url = 'https://api.giphy.com/v1/gifs/search?q=My Chemical Romance&limit=10&api_key=E7TOz8YH0UdvnAm3I6kt7CdpH7o5McoY';
+        const url = 'https://api.giphy.com/v1/gifs/search?q=Evangelion&limit=10&api_key=E7TOz8YH0UdvnAm3I6kt7CdpH7o5McoY';
 
         const resp = await fetch(url);
 
@@ -23,6 +27,7 @@ export const GifGrid = ({ category }) => {
         });
 
         console.log(gifs);
+        setImages(gifs);
     }
 
     // getGifs();
@@ -30,6 +35,13 @@ export const GifGrid = ({ category }) => {
     return (
         <div>
             <h3>{category}</h3>
-        </div>
+            <ol>
+                {
+                    images.map((image) => {
+                        return <li key={image.id}>{image.title}</li>
+                    })
+                }
+            </ol>
+        </div >
     )
 }
