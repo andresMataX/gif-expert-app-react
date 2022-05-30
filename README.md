@@ -1,5 +1,12 @@
 # Gif Expert App
-Proyecto realizado en React con el fin de dar una lista de gifs sobre un tema.
+Proyecto realizado en React con el fin de dar una lista de gifs sobre un tema. Cuando se busca sobre un nuevo tema, se mantienen los gifs previamente obtenidos.
+
+### Interfaces de Usuario
+### Estado inicial
+![image](https://user-images.githubusercontent.com/89869980/171062195-51cd674b-5507-4126-96fb-4d903108ff6b.png)
+
+### Agregado de un nuevo tema
+![image](https://user-images.githubusercontent.com/89869980/171062219-f8083021-6863-4760-bf76-f64fca5ddf50.png)
 
 ## Getting Started with Create React App
 
