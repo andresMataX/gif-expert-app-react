@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# Gif Expert App
+Proyecto realizado en React con el fin de dar una lista de gifs sobre un tema.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
