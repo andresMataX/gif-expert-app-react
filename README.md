@@ -1,3 +1,5 @@
+#### _Curso_: React: De cero a experto ( Hooks y MERN ) | Fernando Herrera - Udemy
+
 # Gif Expert App
 Proyecto realizado en React con el fin de dar una lista de gifs sobre un tema. Cuando se busca sobre un nuevo tema, se mantienen los gifs previamente obtenidos.
 
